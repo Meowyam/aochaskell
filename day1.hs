@@ -1,5 +1,7 @@
 import System.IO
 
+totalFuel :: Integral p => p -> p
+
 totalFuel x
   | eachFuel <= 0 = 0
   | otherwise     = eachFuel + totalFuel eachFuel 
