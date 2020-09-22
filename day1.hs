@@ -1,11 +1,9 @@
-import System.IO
-
 totalFuel :: Integral p => p -> p
 
 totalFuel x
   | eachFuel <= 0 = 0
   | otherwise     = eachFuel + totalFuel eachFuel 
-  where eachFuel = ((subtract 2) . (`div` 3)) x
+  where eachFuel = (subtract 2 . (`div` 3)) x
 
 main :: IO Integer
 
